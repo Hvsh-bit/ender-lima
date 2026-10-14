@@ -1,0 +1,28 @@
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+.aws/
+.ssh/
+.codex/
+.agents/
+
+# Sesiones y archivos de trabajo
+pet.json
+pet_request.json
+imagegen-jobs.json
+*upload*session*
+work/
+tmp/
+logs/
+*.log
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/

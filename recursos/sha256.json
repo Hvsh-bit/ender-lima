@@ -1,0 +1,19 @@
+{
+  "recursos/especificacion.json": "8e2aa1835ecae69a99f2429a41b22b08c58982504efb1f256b9794b114b805fa",
+  "recursos/estados.png": "541045baeaa8e009613e78db37cbe0e669e7da808d811b0cdbe032297a513fd9",
+  "recursos/portada.png": "e76649eef55cf7517dec91e144367562991cc99deefafdded6001beba0d8b980",
+  "recursos/spritesheet.png": "720e49eb0ed0570a2602fa3f243fd7d2c8c78033f5a254b72700dff1ea496bf0",
+  "vistas-previas/all-states.gif": "3562aaf4ffe0f69cdf8a1831300ebd6116af080e1932c18021b676a6943bac05",
+  "vistas-previas/animaciones.mp4": "eceee2c903a666450ad0a624aab74d2ccc312a4799a57d282c9214d12656e7c6",
+  "vistas-previas/failed.gif": "9d39253df728deed9853c0932a88e7bddb4ac035bd99eed85171e9dafca9ce66",
+  "vistas-previas/idle-jump-idle.gif": "f56d794f94550c4bfb04ea5cc69e85599ada4c52e4d7e13af3f59bfb2ff4cca1",
+  "vistas-previas/idle.gif": "aa71434514530dec6ec27d797c0d27c434c5621eac1d3641b485f92a5657e89c",
+  "vistas-previas/jumping.gif": "6c205107b7edd6381eafa3e0a09d1cab91701f57bf624d10d2144d5a1a3c44cf",
+  "vistas-previas/look-loop.gif": "b1e1e50b90eb573322e4d7257412c10a4835b39ad8ebd6b3c28c44faf27b81ff",
+  "vistas-previas/review.gif": "ba742e07040fb9f91836bb1e7ed654f31af7b34329241aa12e6721d71715f674",
+  "vistas-previas/running-left.gif": "cadd7f7569d523bfab6520d9c8fa5cbbb304b64c13957c311180da50ade86de7",
+  "vistas-previas/running-right.gif": "e29ffa7c3179b24d03286f8b211140559a5229d155a5047aae0df2ca1525dd36",
+  "vistas-previas/running.gif": "1bf91d3705bdcc273c1671ae63a54932fe474a81d8084cbfc72497732e007e56",
+  "vistas-previas/waiting.gif": "c3a4b23d2db5940b6ce45244dc13eef4964fb3a73413d8c0a6fc5ab5e64d6458",
+  "vistas-previas/waving.gif": "7a7d7cdc1a39686224a97391c0516ac389666f2b488e057bbc38652f3f0a28c7"
+}
