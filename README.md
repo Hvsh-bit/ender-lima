@@ -1,5 +1,10 @@
 <p align="center">
-  <img src="recursos/cabecera.png" width="1200" alt="Ender Lima. Tu compañero, a tu ritmo. Mascota de bloques con ojos verde lima.">
+  <img src="recursos/cabecera.png" width="1200" alt="Ender Lima, un PET para ChatGPT. Tu compañero, a tu ritmo. Mascota de bloques con ojos verde lima.">
+</p>
+
+<p align="center">
+  <strong>Un PET personalizado para ChatGPT</strong><br>
+  Tu compañero animado, con ojos verde lima.
 </p>
 
 <p align="center">
@@ -14,7 +19,7 @@
 
 ## En movimiento
 
-Una mascota de cuerpo negro y ojos verde lima que saluda, espera y te acompaña mientras trabajas.
+Ender Lima es un PET personalizado para ChatGPT, con cuerpo negro y ojos verde lima. Saluda, espera y te acompaña mientras trabajas.
 
 <picture>
   <source media="(max-width: 600px)" srcset="vistas-previas/galeria-movil.gif">
