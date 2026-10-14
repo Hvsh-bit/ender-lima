@@ -1,48 +1,65 @@
-# Ender Lima
+<p align="center">
+  <img src="recursos/cabecera.png" width="1200" alt="Ender Lima. Tu compañero, a tu ritmo. Mascota de bloques con ojos verde lima.">
+</p>
 
-Mascota animada con ojos verde lima.
+<p align="center">
+  <sub><strong>9</strong> animaciones &nbsp; · &nbsp; <strong>16</strong> miradas &nbsp; · &nbsp; <strong>73</strong> fotogramas</sub>
+</p>
 
-![Portada de Ender Lima en un paisaje de bloques](recursos/portada.png)
+<p align="center">
+  <a href="recursos/spritesheet.png"><strong>Descargar atlas</strong></a> &nbsp; / &nbsp;
+  <a href="vistas-previas/animaciones.mp4">Ver vídeo</a> &nbsp; / &nbsp;
+  <a href="vistas-previas/look-loop.gif">Ver miradas</a>
+</p>
 
-**9 animaciones · 16 direcciones de mirada · 73 fotogramas**
+## En movimiento
 
-[Vista previa](#vista-previa) · [Archivos](#archivos) · [Verificación](#verificación) · [Alcance](#alcance)
+Una mascota de cuerpo negro y ojos verde lima que saluda, espera y te acompaña mientras trabajas.
 
-## Vista previa
+<picture>
+  <source media="(max-width: 600px)" srcset="vistas-previas/galeria-movil.gif">
+  <img src="vistas-previas/galeria.gif" width="960" alt="Seis animaciones de Ender Lima: reposo, saludo, salto, espera, trabajo y revisión.">
+</picture>
 
-![Demostración de las nueve animaciones de Ender Lima](vistas-previas/all-states.gif)
+<p align="center">
+  <sub>Animaciones del atlas final, reunidas en una sola vista.</sub>
+</p>
 
-[Ver vídeo](vistas-previas/animaciones.mp4) · [Ver el salto](vistas-previas/idle-jump-idle.gif) · [Ver las miradas](vistas-previas/look-loop.gif)
+<br>
 
-Ender Lima es una mascota de cuerpo negro, cabeza cúbica y extremidades largas. Este repositorio reúne el atlas transparente y sus vistas previas. La ambientación de bloques se limita al diseño gráfico; los archivos se describen en español.
+## Los archivos, a mano
 
-## Archivos
+**[Atlas transparente](recursos/spritesheet.png)** &nbsp; PNG v2 de 1.536 × 2.288 píxeles, listo para un flujo de importación compatible.
 
-| Archivo | Contenido |
+**[Todas las animaciones](vistas-previas/)** &nbsp; GIF individuales, secuencia completa, salto y vídeo MP4.
+
+**[Especificación](recursos/especificacion.json)** &nbsp; Distribución de las filas, tamaños y direcciones de mirada.
+
+<br>
+
+<details>
+<summary><strong>Detalles del atlas</strong></summary>
+
+<br>
+
+| Propiedad | Valor |
 | :--- | :--- |
-| [Atlas de animación](recursos/spritesheet.png) | PNG transparente de 1.536 × 2.288 píxeles, formato v2. |
-| [Estados](recursos/estados.png) | Ejemplos de reposo, saludo, salto, trabajo y revisión. |
-| [Animaciones](vistas-previas/) | GIF por estado, secuencia completa y vídeo MP4. |
-| [Especificación](recursos/especificacion.json) | Dimensiones, distribución y cantidad de fotogramas. |
-| [Sumas de comprobación](recursos/sha256.json) | Integridad de los recursos y las vistas previas. |
+| Formato | PNG RGBA transparente, versión 2 |
+| Dimensiones | 1.536 × 2.288 píxeles |
+| Celdas | 192 × 208 píxeles |
+| Distribución | 8 columnas y 11 filas |
+| Contenido | 73 fotogramas y 15 celdas vacías |
 
-## Animaciones
+Las primeras nueve filas contienen reposo, carrera hacia la derecha, carrera hacia la izquierda, saludo, salto, reacción de error, espera, trabajo y revisión. Las dos últimas reúnen las 16 miradas en sentido horario.
 
-| Estado | Fotogramas | Vista previa |
-| :--- | ---: | :--- |
-| Reposo | 6 | [GIF](vistas-previas/idle.gif) |
-| Carrera hacia la derecha | 8 | [GIF](vistas-previas/running-right.gif) |
-| Carrera hacia la izquierda | 8 | [GIF](vistas-previas/running-left.gif) |
-| Saludo | 4 | [GIF](vistas-previas/waving.gif) |
-| Salto | 5 | [GIF](vistas-previas/jumping.gif) |
-| Reacción de error | 8 | [GIF](vistas-previas/failed.gif) |
-| Espera | 6 | [GIF](vistas-previas/waiting.gif) |
-| Trabajo | 6 | [GIF](vistas-previas/running.gif) |
-| Revisión | 6 | [GIF](vistas-previas/review.gif) |
+[Ver la secuencia completa](vistas-previas/all-states.gif) · [Ver el salto](vistas-previas/idle-jump-idle.gif)
 
-Las dos últimas filas del atlas contienen las 16 direcciones de mirada, en sentido horario. Cada celda mide 192 × 208 píxeles. Las celdas restantes permanecen transparentes.
+</details>
 
-## Verificación
+<details>
+<summary><strong>Verificación y seguridad</strong></summary>
+
+<br>
 
 Con Python 3.9 o posterior, sin dependencias adicionales:
 
@@ -50,14 +67,18 @@ Con Python 3.9 o posterior, sin dependencias adicionales:
 python3 scripts/verificar.py
 ```
 
-El comando comprueba las sumas SHA-256, la estructura y transparencia del atlas, los 73 fotogramas requeridos, las 15 celdas vacías y los enlaces locales del README. También revisa los nombres y el contenido de los archivos incluidos para detectar patrones comunes de credenciales y rutas personales. Esta revisión es acotada; no garantiza detectar cualquier secreto posible.
+Comprueba las sumas SHA-256, la estructura del atlas, la transparencia de las celdas y los enlaces locales. También busca patrones comunes de credenciales y rutas personales. La revisión es acotada; no garantiza detectar cualquier secreto posible. Los números de este README se pueden contrastar con este comando y la [especificación](recursos/especificacion.json).
 
-## Alcance
+La calidad de los gestos y del movimiento requiere revisión visual.
 
-Este repositorio contiene recursos gráficos. No es un mod, no incluye un servidor ni ejecuta servicios de red. No instala ni selecciona la mascota en una cuenta. La portada es una ilustración; las vistas previas proceden del atlas final.
+[Sumas de comprobación](recursos/sha256.json) · [Política de seguridad](SECURITY.md)
 
-La verificación local confirma integridad y estructura. La interpretación de los gestos y la calidad de movimiento requieren revisión visual.
+</details>
 
-## Procedencia y privacidad
+<br>
 
-El arte se creó con imagegen y el atlas se ensambló a partir de los fotogramas aprobados. Se excluyeron archivos de sesión, identificadores de cuenta o mascota, rutas locales, enlaces temporales, credenciales y material de trabajo descartado. Consulta [SECURITY.md](SECURITY.md) para el alcance de la revisión y [NOTICE.md](NOTICE.md) para la procedencia.
+Este repositorio contiene recursos gráficos. No instala ni activa la mascota en una cuenta.
+
+<p align="center">
+  <sub>Arte creado con imagegen. Proyecto independiente. <a href="NOTICE.md">Procedencia y condiciones de uso</a>.</sub>
+</p>

@@ -8,9 +8,23 @@ import struct
 import sys
 import zlib
 from pathlib import Path
+from html.parser import HTMLParser
 
 ROOT = Path(__file__).resolve().parent.parent
 SELF = Path(__file__).resolve()
+
+
+class ReadmeLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        for name, value in attrs:
+            if value and name in {'href', 'src'}:
+                self.links.append(value)
+            elif value and name == 'srcset':
+                self.links.extend(candidate.strip().split()[0] for candidate in value.split(',') if candidate.strip())
 
 
 def require(condition, message):
@@ -94,7 +108,9 @@ def verify():
     require(spec['fotogramas_por_fila'] == counts, 'La especificación no coincide con el atlas.')
 
     readme = (ROOT / 'README.md').read_text()
-    for link in re.findall(r'\]\(([^)]+)\)', readme):
+    html_links = ReadmeLinks()
+    html_links.feed(readme)
+    for link in re.findall(r'\]\(([^)]+)\)', readme) + html_links.links:
         if link.startswith('#'):
             continue
         require(not re.match(r'[a-z]+:', link), 'El README debe usar enlaces locales.')
